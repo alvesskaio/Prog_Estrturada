@@ -62,6 +62,7 @@ print([0] * 10) # Vai retornar [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 # Operações com listas - Iteração
 print("-"* 40)
+
 for aluno in alunos:
     print(aluno)
 
