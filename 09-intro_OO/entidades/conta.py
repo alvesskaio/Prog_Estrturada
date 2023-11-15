@@ -19,11 +19,11 @@ class Conta :
     def ver_saldo(self):
         return self.saldo
 
-    # def __str__(self):
-    #     return self.titular + "-" + self.agencia
+    def __str__(self):
+        return f"{self.titular}: saldo R${self.saldo:.2f}"
 
     def __eq__(self, obj):
         if isinstance(obj, Conta):
-            return self.titular == obj.titular and self.agencia == obj.agencia
+            return self.titular == obj.titular and self.saldo == obj.saldo
         return False
 

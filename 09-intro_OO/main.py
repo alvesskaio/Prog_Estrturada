@@ -1,16 +1,20 @@
+from   entidades.agencia import Agencia
 from   entidades.conta import Conta
 
 def main():
     c1 = Conta("Victor","12345-3")
-    c2 = Conta("Victor","12345-3")
-    print(c1)
-    print(c2)
+    c2 = Conta("Kaio","12245-3")
+    ag = Agencia("1234-5", "Rua-x")
 
-    c1.depositar(50)
-    c2.sacar(60)
-    print("-" * 38)
-    print(c1.ver_saldo())
-    print(c2.ver_saldo())
+    ag.add_conta(c1)
+    ag.listar_contas()
+    print(ag.transferir(c1, c2, 50))
+    ag.listar_contas()
+    ag.add_conta(c2)
+    print(ag.transferir(c1, c2, 50))
+    ag.listar_contas()
+
+
 
 if __name__ == "__main__":
     main()
